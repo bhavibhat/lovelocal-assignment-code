@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head><title>Exam Registration</title>
+<script type="text/javascript">
+function disp(usn,sem)
+{
+  var pattern1=/^[1-4][A-Z]{2}[0-9]{2}[A-Z]{3}[0-9]{3}$/
+  var pattern2=/^[1-6]$/
+  if(!usn.value.match(pattern1)||usn.value.length==0||!sem.value.match(pattern2)||sem.value.length==0)
+  {
+    alert("Invalid USN or Sem!");
+    return false;
+  }
+  else
+    alert("Valid USN & Sem!");
+}
+</script>
+</head>
+<body>
+<center>
+<h1> DAYANANDA SAGAR COLLEGE OF ENGINEERING </h1><br/>
+<h2> Master of Computer Application</h2><br/>
+<hr/>
+<h3> Examination Registartion</h3>
+<form action="">
+USN: <input type="text" name="usn" /><br/>
+Semester: <input type="text" name="sem" /><br/>
+Amount: <input type="text" name="amt" /><br/>
+<input type="button" value="Submit" onclick="disp(usn,sem)" />
+</form>
+</body>
+</html>
